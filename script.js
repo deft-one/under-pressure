@@ -15,6 +15,10 @@ let textArea = document.getElementById('textArea');
 let submitBtn = document.getElementById('submitBtn');
 let quoteBtn1 = document.getElementById('quoteBtn1');
 let quoteBtn2 = document.getElementById('quoteBtn2');
+let galleryModal = document.getElementById('galleryModal');
+let modalImg = document.getElementById('modalImg');
+/* let images = document.getElementsByClassName('gallery-thumb');
+let gallery = Array.from(images); */
 
 function validateForm(e) {
     if (checkBox.checked !== true) {
@@ -65,12 +69,26 @@ function menuIn() {
     subMenuItem3.classList.add('sub-menu-in-3');
 }
 
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('gallery-thumb')) {
+        if (!galleryModal.classList.contains('modalOpen')) {
+            modalImg.src = e.target.src;
+            galleryModal.classList.add('modalOpen');
+            galleryModal.classList.remove('modalClose');
+        } 
+    }
+    if (e.target === galleryModal) {
+        modalImg.src = '';
+        galleryModal.classList.remove('modalOpen');
+        galleryModal.classList.add('modalClose');
+    }
+});
+
 submitBtn.addEventListener('click', function(e) {
     validateForm(e);
 });
 
 document.addEventListener('click', function(e) {
-    console.log(e.target);
     if (e.target === quoteBtn1 || e.target === quoteBtn2) {
         e.preventDefault();
         document.getElementById('contactModal').classList.add('modalOpen');
