@@ -205,7 +205,7 @@ ul, li {
     font-weight: 400;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
-.hero-h2, .hero-p, .quote-btn, .menu, .sub-menu, .sub-menu-a, .slogan, .paragraph, span, #toTop, .service-menu-h2, .service-menu-item {
+.hero-h2, .hero-p, .quote-btn, .menu, .sub-menu, .sub-menu-a, .slogan, .paragraph, span, #toTop, .service-menu-h2, .service-menu-item, .close {
     font-family: 'Open Sans', sans-serif;
 }
 .hero-h2 {
@@ -387,7 +387,19 @@ ul, li {
     transform: translate(-50%, -50%);
     display: block;
     width: 95%;
-    max-width: 350px;
+    max-width: 400px;
+}
+.close {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    padding: 3px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+.close:hover {
+    cursor: pointer;
 }
 .call-icon {
     position: fixed;
@@ -414,20 +426,18 @@ ul, li {
     cursor: pointer;
 }
 .contact-modal {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.0);
-    border: 2px solid red;
+    transform: rotateX(90deg);
 }
 .contact-form {
     width: 90%;
     max-width: 500px;
     margin: 0 auto;
-    background-color: blue;
 }
 .form-message-cont {
     text-align: center;

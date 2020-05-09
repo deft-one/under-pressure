@@ -17,8 +17,9 @@ let quoteBtn1 = document.getElementById('quoteBtn1');
 let quoteBtn2 = document.getElementById('quoteBtn2');
 let galleryModal = document.getElementById('galleryModal');
 let modalImg = document.getElementById('modalImg');
-/* let images = document.getElementsByClassName('gallery-thumb');
-let gallery = Array.from(images); */
+let closeModal = document.getElementById('close');
+let closeForm = document.getElementById('closeForm');
+let contactModal = document.getElementById('contactModal');
 
 function validateForm(e) {
     if (checkBox.checked !== true) {
@@ -77,10 +78,12 @@ document.addEventListener('click', function(e) {
             galleryModal.classList.remove('modalClose');
         } 
     }
-    if (e.target === galleryModal) {
-        modalImg.src = '';
+    if (e.target === galleryModal || e.target === closeModal) {
         galleryModal.classList.remove('modalOpen');
         galleryModal.classList.add('modalClose');
+        setTimeout(function() {
+            modalImg.src = '';
+        },500);
     }
 });
 
@@ -90,8 +93,11 @@ submitBtn.addEventListener('click', function(e) {
 
 document.addEventListener('click', function(e) {
     if (e.target === quoteBtn1 || e.target === quoteBtn2) {
-        e.preventDefault();
-        document.getElementById('contactModal').classList.add('modalOpen');
+        contactModal.classList.remove('modalClose');
+        contactModal.classList.add('modalOpen');
+    } else if (e.target === contactModal || e.target === closeForm) {
+        contactModal.classList.remove('modalOpen');
+        contactModal.classList.add('modalClose');
     }
 });
 

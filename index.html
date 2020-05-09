@@ -47,7 +47,7 @@
                 <h1 class="hero-h1">Under Pressure</h1>
                 <h2 class="hero-h2">Exterior Cleaning and Restoration Services</h2>
                 <p class="hero-p">Our professional technicians provide exterior cleaning services to Spring Hill and surrounding areas including Hernando county, Citrus county, and Pasco county.</p>
-                <button class="quote-btn">Free Quote</button>
+                <button id="quoteBtn1" class="quote-btn">Free Quote</button>
             </div>
         </div>
         <div class="page-sect">
@@ -57,7 +57,7 @@
             <p class="paragraph question"><strong>Would you like to raise the value of your home by ten percent?</strong></p>
             <p class="paragraph">Our company offers several exterior services that will not only boost your curb appeal, but could also help raise the resale value of your home. &nbsp;When it comes to home maintenance, it’s important to maintain a clean property for aesthetic value and curb appeal. &nbsp;When mold, mildew, algae and other airborne contaminants are allowed to remain on the exterior surfaces of a property, they can cause premature wear on your siding, roof, concrete and gutters. &nbsp;Working with a professional Exterior Cleaning Company can increase the longevity of such surfaces and boost the property’s resale value.</p>
             <p class="paragraph">If you choose to use Under Pressure Exterior Cleaning & Restoration, we take quality seriously and you will always get the best with our exterior cleaning solutions. &nbsp;We look forward to serving  our community in the Hernando, Citrus, and Pasco areas!</p>
-            <button class="quote-btn">Free Quote</button>
+            <button id="quoteBtn2" class="quote-btn">Free Quote</button>
         </div>
         <div id="services" class="page-sect">
             <h2 class="services-h2">Exterior Cleaning Services</h2>
@@ -159,11 +159,9 @@
             <a href="tel:+1-352-835-6209"><img class="call-icon" src="images/call-icon.svg" alt=""></a>
         </div>
         <div class="toTop" id="toTop">&#171;</div>
-        <div class="contact-modal">
+        <div id="contactModal" class="contact-modal">
             <!-- Contact form modal -->
             <form class="contact-form" action="includes/user_process.php" method="post" name="user" id="contactForm">
-
-                <div id="closeForm">&#10006;</div>
         
                 <div class="form-message-cont">
                     <input class="checkbox" type="checkbox" name="checkbox" id="checkBox">
@@ -183,8 +181,12 @@
                 <div class="error" id="error"></div>
         
             </form>
+            <div class="close" id="closeForm">CLOSE</div>
         </div>
-        <div class="gallery-modal" id="galleryModal"><img id="modalImg" src="" alt=""></div>
+        <div class="gallery-modal" id="galleryModal">
+            <img id="modalImg" src="" alt="">
+            <div class="close" id="close">CLOSE</div>
+        </div>
 
     </div>
 
