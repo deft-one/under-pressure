@@ -5,37 +5,89 @@ let subMenuItem2 = document.getElementById('subMenuItem2');
 let subMenuItem3 = document.getElementById('subMenuItem3');
 let hero = document.getElementById('hero');
 let toTop = document.getElementById('toTop');
+let contactForm = document.getElementById('contactForm');
+let checkBox = document.getElementById('checkBox');
+let formClause = document.getElementById('formClause');
+let fullName = document.getElementById('fullName');
+let phoneNumber = document.getElementById('phoneNumber');
+let eMail = document.getElementById('eMail');
+let textArea = document.getElementById('textArea');
+let submitBtn = document.getElementById('submitBtn');
+let quoteBtn1 = document.getElementById('quoteBtn1');
+let quoteBtn2 = document.getElementById('quoteBtn2');
 
+function validateForm(e) {
+    if (checkBox.checked !== true) {
+        formClause.style.color = 'rgb(255, 147, 147)';
+    } else {
+        formClause.style.color = 'white';
+    }
+    if (fullName.value === '') {
+        fullName.style.backgroundColor = 'rgb(255, 147, 147';
+        fullName.placeholder = 'Full Name Required';
+    } else {
+        fullName.style.backgroundColor = 'white';
+        fullName.placeholder = '*Full Name';
+    }
+    if (phoneNumber.value === '') {
+        phoneNumber.style.backgroundColor = 'rgb(255, 147, 147';
+        phoneNumber.placeholder = 'Phone Number Required';
+    } else {
+        phoneNumber.style.backgroundColor = 'white';
+        phoneNumber.placeholder = '*Phone Number';
+    }
+    if (eMail.value === '') {
+        eMail.style.backgroundColor = 'rgb(255, 147, 147';
+        eMail.placeholder = 'eMail Required';
+    } else {
+        eMail.style.backgroundColor = 'white';
+        eMail.placeholder = '*eMail';
+    }
+}
+
+function menuOut() {
+    burger.classList.add('open');
+    subMenuItem1.classList.remove('sub-menu-in-1');
+    subMenuItem2.classList.remove('sub-menu-in-2');
+    subMenuItem3.classList.remove('sub-menu-in-3');
+    subMenuItem1.classList.add('sub-menu-out-1');
+    subMenuItem2.classList.add('sub-menu-out-2');
+    subMenuItem3.classList.add('sub-menu-out-3');
+}
+
+function menuIn() {
+    burger.classList.remove('open');
+    subMenuItem1.classList.remove('sub-menu-out-1');
+    subMenuItem2.classList.remove('sub-menu-out-2');
+    subMenuItem3.classList.remove('sub-menu-out-3');
+    subMenuItem1.classList.add('sub-menu-in-1');
+    subMenuItem2.classList.add('sub-menu-in-2');
+    subMenuItem3.classList.add('sub-menu-in-3');
+}
+
+submitBtn.addEventListener('click', function(e) {
+    validateForm(e);
+});
+
+document.addEventListener('click', function(e) {
+    console.log(e.target);
+    if (e.target === quoteBtn1 || e.target === quoteBtn2) {
+        e.preventDefault();
+        document.getElementById('contactModal').classList.add('modalOpen');
+    }
+});
 
 document.addEventListener('click', function(e) {
     if (e.target === burger || e.target.classList.contains('sub-menu')) {
         e.preventDefault();
         if (burger.classList.contains('open')) {
-            burger.classList.remove('open');
-            subMenuItem1.classList.remove('sub-menu-out-1');
-            subMenuItem2.classList.remove('sub-menu-out-2');
-            subMenuItem3.classList.remove('sub-menu-out-3');
-            subMenuItem1.classList.add('sub-menu-in-1');
-            subMenuItem2.classList.add('sub-menu-in-2');
-            subMenuItem3.classList.add('sub-menu-in-3');
+            menuIn();
         } else {
-            burger.classList.add('open');
-            subMenuItem1.classList.remove('sub-menu-in-1');
-            subMenuItem2.classList.remove('sub-menu-in-2');
-            subMenuItem3.classList.remove('sub-menu-in-3');
-            subMenuItem1.classList.add('sub-menu-out-1');
-            subMenuItem2.classList.add('sub-menu-out-2');
-            subMenuItem3.classList.add('sub-menu-out-3');
+            menuOut();
         }
     } else {
         if (burger.classList.contains('open')) {
-            burger.classList.remove('open');
-            subMenuItem1.classList.remove('sub-menu-out-1');
-            subMenuItem2.classList.remove('sub-menu-out-2');
-            subMenuItem3.classList.remove('sub-menu-out-3');
-            subMenuItem1.classList.add('sub-menu-in-1');
-            subMenuItem2.classList.add('sub-menu-in-2');
-            subMenuItem3.classList.add('sub-menu-in-3');
+            menuIn();
         }
     }
 });

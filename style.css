@@ -138,22 +138,20 @@ ul, li {
     list-style-type: none;
     text-align: left;
 }
-.menu-a, .burger {
+.menu-a {
     color: white;
     text-shadow: 0px 0px 3px white;
 }
 .menu-a:hover {
     border-bottom: 2px solid rgba(255, 255, 255, 0.8);
 }
-.burger {
+.trigram {
+    display: block;
+    width: 45px;
     position: absolute;
     top: 0;
     right: 0;
     padding: 10px;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: right;
-    font-family: sans-serif;
 }
 .hide-desktop {
     display: none;
