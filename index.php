@@ -28,7 +28,7 @@
     
     <div class="page-contain">
     
-        <div class="header-contain">
+        <div id="headerContain" class="header-contain">
             <nav>
                 <ul id="navUl" class="nav-ul">
                     <li class="menu"><img class="logo" src="images/under-pressure-logo-003.svg" alt=""></li>
@@ -79,47 +79,47 @@
             <div id="houses" class="service-cont">
                 <h3 class="service-h3">Soft Wash House Washing</h3>
                 <img class="service-img" src="images/siding.jpg" alt="">
-                <p class="paragraph">Soft washing is the use of water-based, biodegradable chemicals to break down dirt, grime, molds, mildews, algae and bacteria - leaving the surface clean and sanitized. &nbsp;Soft washing does not deteriorate or damage any surface of your home like power/pressure washing often can.</p>
+                <p class="services-p">Soft washing is the use of water-based, biodegradable chemicals to break down dirt, grime, molds, mildews, algae and bacteria - leaving the surface clean and sanitized. &nbsp;Soft washing does not deteriorate or damage any surface of your home like power/pressure washing often can.</p>
             </div>
             <div id="surfaces" class="service-cont">
                 <h3 class="service-h3">Surface Cleaning</h3>
                 <img class="service-img" src="images/concrete.jpg" alt="">
-                <p class="paragraph">Every driveway / patio is pre-treated and post-treated if you want it to be cleaned effectively. &nbsp;It is important to hire a professional pressure washing service. &nbsp;Under Pressure Exterior Cleaning & Restoration will go above and beyond for your concrete / patio / deck pressure washing and all other exterior cleaning needs.</p>
+                <p class="services-p">Every driveway / patio is pre-treated and post-treated if you want it to be cleaned effectively. &nbsp;It is important to hire a professional pressure washing service. &nbsp;Under Pressure Exterior Cleaning & Restoration will go above and beyond for your concrete / patio / deck pressure washing and all other exterior cleaning needs.</p>
             </div>
             <div id="roofs" class="service-cont">
                 <h3 class="service-h3">Soft Wash Roof Cleaning</h3>
                 <img class="service-img" src="images/roofs.png" alt="">
-                <p class="paragraph">When you decide to clean your roof, it is absolutely imperative that you choose a soft washing contractor. &nbsp;Traditional power washing can blast away shingles and cause flashing to leak. &nbsp;Even worse, it can negate any warranty that you may have on your roofing system. &nbsp;The most recommended way to clean a roof is via a soft wash method. &nbsp;We will utilize a gentle stream of water and a proprietary blend of biodegradable algaecides and detergents to lift stains from your roof and to kill algae, moss, mildew or lichen present. &nbsp;Afterwards, your roofing will be restored to its original beauty.</p>
+                <p class="services-p">When you decide to clean your roof, it is absolutely imperative that you choose a soft washing contractor. &nbsp;Traditional power washing can blast away shingles and cause flashing to leak. &nbsp;Even worse, it can negate any warranty that you may have on your roofing system. &nbsp;The most recommended way to clean a roof is via a soft wash method. &nbsp;We will utilize a gentle stream of water and a proprietary blend of biodegradable algaecides and detergents to lift stains from your roof and to kill algae, moss, mildew or lichen present. &nbsp;Afterwards, your roofing will be restored to its original beauty.</p>
             </div>
             <div id="gutters" class="service-cont">
                 <h3 class="service-h3">Gutter Maintenance</h3>
                 <img class="service-img" src="images/gutters.jpg" alt="">
-                <p class="paragraph">Homeowners know maintenance is the key to preventing costly future repairs. &nbsp;One simple way to prevent costly home repairs down the road is to keep your gutters and downspouts free of debris. &nbsp;We also offer removal of streaks and cleaning of the outside of the gutter for an additional cost.</p>
+                <p class="services-p">Homeowners know maintenance is the key to preventing costly future repairs. &nbsp;One simple way to prevent costly home repairs down the road is to keep your gutters and downspouts free of debris. &nbsp;We also offer removal of streaks and cleaning of the outside of the gutter for an additional cost.</p>
             </div>
             <div id="fences" class="service-cont">
                 <h3 class="service-h3">Fence Cleaning</h3>
                 <img class="service-img" src="images/fences.jpg" alt="">
-                <p class="paragraph">Sun exposure as well as climate conditions can take a toll on your fence. &nbsp;Bring your fencing back to its initial glory with our specialized cleansing procedure, which deals with all sorts of fencing including but not limited to wood, vinyl, brick or synthetic. &nbsp;A good cleansing with the right approach will help maintain your fence quality and prevent replacing it more often.</p>
+                <p class="services-p">Sun exposure as well as climate conditions can take a toll on your fence. &nbsp;Bring your fencing back to its initial glory with our specialized cleansing procedure, which deals with all sorts of fencing including but not limited to wood, vinyl, brick or synthetic. &nbsp;A good cleansing with the right approach will help maintain your fence quality and prevent replacing it more often.</p>
             </div>
             <div id="patios" class="service-cont">
                 <h3 class="service-h3">Patio & Deck Cleaning</h3>
                 <img class="service-img" src="images/patios.jpg" alt="">
-                <p class="paragraph">While lots of composite decks as well as patio brands proclaim to be “maintenance- free”, they inevitably begin to build up grime, algae and mold on the surface. &nbsp;The very same can be said for all other material used in patios and decks. &nbsp;Wash away all that grime and get your patio back to an immaculate condition so you can enjoy the outdoors.</p>
+                <p class="services-p">While lots of composite decks as well as patio brands proclaim to be “maintenance- free”, they inevitably begin to build up grime, algae and mold on the surface. &nbsp;The very same can be said for all other material used in patios and decks. &nbsp;Wash away all that grime and get your patio back to an immaculate condition so you can enjoy the outdoors.</p>
             </div>
             <div id="screens" class="service-cont">
                 <h3 class="service-h3">Pool Enclosures & Lanais</h3>
                 <img class="service-img" src="images/screens.png" alt="">
-                <p class="paragraph">Remove the mold, mildew, and algae that has made its home in your screened enclosure. &nbsp;Screened enclosure cleaning is time consuming and it takes a gentle, low pressure approach to safely clean them. &nbsp;The aluminum frame and screen must be sprayed from every angle to remove all the contaminants. &nbsp;If too much pressure is used, the screen can be stretched or blown out and the pool deck can chip or peel. &nbsp;We let our biodegradable cleaning detergents do the work for us. &nbsp;We can then proceed to rinse the enclosed area clean with low pressure.</p>
+                <p class="services-p">Remove the mold, mildew, and algae that has made its home in your screened enclosure. &nbsp;Screened enclosure cleaning is time consuming and it takes a gentle, low pressure approach to safely clean them. &nbsp;The aluminum frame and screen must be sprayed from every angle to remove all the contaminants. &nbsp;If too much pressure is used, the screen can be stretched or blown out and the pool deck can chip or peel. &nbsp;We let our biodegradable cleaning detergents do the work for us. &nbsp;We can then proceed to rinse the enclosed area clean with low pressure.</p>
             </div>
             <div id="windows" class="service-cont">
                 <h3 class="service-h3">Window Cleaning</h3>
                 <img class="service-img" src="images/windows.jpg" alt="">
-                <p class="paragraph">Are grimy windows clouding your view of the world, leaving your beautiful home or business’s exterior less than ideal? &nbsp;Are you tired of dragging awkward ladders around your house in an attempt to reach second-story windows, only to find your cleaning attempts leave the windows covered in streaks? &nbsp;It’s time to put down the paper towels, put away the ladder, pick up the phone and call us at Under Pressure Exterior Cleaning & Restoration.</p>
+                <p class="services-p">Are grimy windows clouding your view of the world, leaving your beautiful home or business’s exterior less than ideal? &nbsp;Are you tired of dragging awkward ladders around your house in an attempt to reach second-story windows, only to find your cleaning attempts leave the windows covered in streaks? &nbsp;It’s time to put down the paper towels, put away the ladder, pick up the phone and call us at Under Pressure Exterior Cleaning & Restoration.</p>
             </div>
             <div id="pavers" class="service-cont">
                 <h3 class="service-h3">Pavers, Rock Beds, Brick and Stone</h3>
                 <img class="service-img" src="images/sealer.jpg" alt="">
-                <p class="paragraph">Do you ever catch yourself looking at your pavers, rock beds, bricks or stone wondering what kind of gunk gets stuck between those? &nbsp;Or maybe you're wondering how you're going to get all the gunk off. &nbsp;Our biodegradable cleaning solutions can reach even the tiniest of cracks. &nbsp;Exterminating all the build up caused by the surrounding elements. &nbsp;Instead of spending countless hours trying to get these tricky materials clean, call us and we will simplify your life with our simple solutions. We also offer sealing services for these types of materials that will cut down on cost of cleaning over a few years.</p>
+                <p class="services-p">Do you ever catch yourself looking at your pavers, rock beds, bricks or stone wondering what kind of gunk gets stuck between those? &nbsp;Or maybe you're wondering how you're going to get all the gunk off. &nbsp;Our biodegradable cleaning solutions can reach even the tiniest of cracks. &nbsp;Exterminating all the build up caused by the surrounding elements. &nbsp;Instead of spending countless hours trying to get these tricky materials clean, call us and we will simplify your life with our simple solutions. We also offer sealing services for these types of materials that will cut down on cost of cleaning over a few years.</p>
             </div>
         </div>
         <div class="page-sect">
@@ -141,20 +141,26 @@
         <div id="ourWork" class="page-sect">
             <h2 class="services-h2">Our Work</h2>
             <div class="gallery-grid">
-                <img src="images/concrete.jpg" alt="" class="gallery-thumb">
-                <img src="images/fences.jpg" alt="" class="gallery-thumb">
-                <img src="images/gutters.jpg" alt="" class="gallery-thumb">
-                <img src="images/patios.jpg" alt="" class="gallery-thumb">
-                <img src="images/roofs.png" alt="" class="gallery-thumb">
-                <img src="images/screens.png" alt="" class="gallery-thumb">
-                <img src="images/sealer.jpg" alt="" class="gallery-thumb">
-                <img src="images/siding.jpg" alt="" class="gallery-thumb">
-                <img src="images/windows.jpg" alt="" class="gallery-thumb">
+                <div class="gallery-thumb"><img class="thumbnail" src="images/concrete.jpg" alt=""></div>
+                <div class="gallery-thumb"><img class="thumbnail" src="images/fences.jpg" alt=""></div>
+                <div class="gallery-thumb"><img class="thumbnail" src="images/gutters.jpg" alt=""></div>
+                <div class="gallery-thumb"><img class="thumbnail" src="images/patios.jpg" alt=""></div>
+                <div class="gallery-thumb"><img class="thumbnail" src="images/roofs.png" alt=""></div>
+                <div class="gallery-thumb"><img class="thumbnail" src="images/screens.png" alt=""></div>
+                <div class="gallery-thumb"><img class="thumbnail" src="images/sealer.jpg" alt=""></div>
+                <div class="gallery-thumb"><img class="thumbnail" src="images/siding.jpg" alt=""></div>
+                <div class="gallery-thumb"><img class="thumbnail" src="images/windows.jpg" alt=""></div>
             </div>
         </div>
-        <div class="page-sect"></div>
-        <div class="page-sect"></div>
-        <div class="footer-contain"></div>
+        <div class="footer-contain">
+            <div class="sitemap">
+                <a href="#services" class="sitemap-a">Services</a>
+                <a href="#benefits" class="sitemap-a">Benefits</a>
+                <a href="gallery" class="sitemap-a">Gallery</a>
+            </div>
+            <p class="copyright"></p>
+            <p class="signature">Designed and built by <a href="https://www.deftoriginals.com">Deftoriginals.</a></p>
+        </div>
         <div class="call hide-desktop">
             <a href="tel:+1-352-835-6209"><img class="call-icon" src="images/call-icon.svg" alt=""></a>
         </div>
@@ -168,15 +174,15 @@
                     <span id="formClause">Please contact me about your exterior cleaning services.</span>
                 </div>
         
-                <input type="text" name="firstName" id="firstName" placeholder="*First Name" value="" required>
+                <input type="text" name="fullName" id="fullName" placeholder="*Full Name" value="" required>
         
-                <input type="text" name="lastName" id="lastName" placeholder="*Last Name" value="" required>
+                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="*Phone Number" value="" required>
         
-                <input type="email" name="email" id="eMail" placeholder="*Email" value="" required>
+                <input type="email" name="eMail" id="eMail" placeholder="*Email" value="" required>
         
-                <input type="text" name="website" id="website" placeholder="*www.yourwebsite.com" value="" required>
+                <textarea type="text" name="textArea" id="textArea" placeholder="Questions or comments..." value=""></textarea>
         
-                <button type="submit" name="submit" id="submitBtn" disabled>Send</button>
+                <button class="quote-btn" type="submit" name="submit" id="submitBtn" >Send</button><!-- make disabled -->
         
                 <div class="error" id="error"></div>
         

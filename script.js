@@ -23,26 +23,26 @@ let contactModal = document.getElementById('contactModal');
 
 function validateForm(e) {
     if (checkBox.checked !== true) {
-        formClause.style.color = 'rgb(255, 147, 147)';
+        formClause.style.color = 'rgba(255, 0, 0, 0.8)';
     } else {
         formClause.style.color = 'white';
     }
     if (fullName.value === '') {
-        fullName.style.backgroundColor = 'rgb(255, 147, 147';
+        fullName.style.backgroundColor = 'rgba(255, 0, 0, 0.356)';
         fullName.placeholder = 'Full Name Required';
     } else {
         fullName.style.backgroundColor = 'white';
         fullName.placeholder = '*Full Name';
     }
     if (phoneNumber.value === '') {
-        phoneNumber.style.backgroundColor = 'rgb(255, 147, 147';
+        phoneNumber.style.backgroundColor = 'rgba(255, 0, 0, 0.356)';
         phoneNumber.placeholder = 'Phone Number Required';
     } else {
         phoneNumber.style.backgroundColor = 'white';
         phoneNumber.placeholder = '*Phone Number';
     }
     if (eMail.value === '') {
-        eMail.style.backgroundColor = 'rgb(255, 147, 147';
+        eMail.style.backgroundColor = 'rgba(255, 0, 0, 0.356)';
         eMail.placeholder = 'eMail Required';
     } else {
         eMail.style.backgroundColor = 'white';
@@ -71,16 +71,18 @@ function menuIn() {
 }
 
 document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('gallery-thumb')) {
+    if (e.target.classList.contains('thumbnail')) {
         if (!galleryModal.classList.contains('modalOpen')) {
             modalImg.src = e.target.src;
             galleryModal.classList.add('modalOpen');
             galleryModal.classList.remove('modalClose');
+            closeModal.style.display = 'block';
         } 
     }
     if (e.target === galleryModal || e.target === closeModal) {
         galleryModal.classList.remove('modalOpen');
         galleryModal.classList.add('modalClose');
+        closeModal.style.display = 'none';
         setTimeout(function() {
             modalImg.src = '';
         },500);
@@ -95,9 +97,11 @@ document.addEventListener('click', function(e) {
     if (e.target === quoteBtn1 || e.target === quoteBtn2) {
         contactModal.classList.remove('modalClose');
         contactModal.classList.add('modalOpen');
+        closeForm.style.display = 'block';
     } else if (e.target === contactModal || e.target === closeForm) {
         contactModal.classList.remove('modalOpen');
         contactModal.classList.add('modalClose');
+        closeForm.style.display = 'none';
     }
 });
 

@@ -98,6 +98,9 @@ input, select {
 html {
     overflow-X: hidden;
 }
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -143,12 +146,12 @@ ul, li {
     border-bottom: 2px solid rgba(255, 255, 255, 0.8);
 }
 .trigram {
-    display: block;
-    width: 45px;
     position: absolute;
     top: 0;
     right: 0;
-    padding: 10px;
+    width: 40px;
+    margin: 12px 12px 0 0;
+    
 }
 .hide-desktop {
     display: none;
@@ -157,9 +160,10 @@ ul, li {
     position: absolute;
     right: 0;
     top: 0px;
-    width: 200px;
+    width: 175px;
     list-style-type: none;
-    padding: 10px;
+    padding: 20px 30px 20px 20px;
+    text-align: right;
     background-color: rgba(0, 92, 169, 0.9);
     transform: rotateX(90deg);
     z-index: 999;
@@ -167,11 +171,10 @@ ul, li {
 .sub-menu-a {
     color: white;
     font-size: 24px;
-    text-align: right;
     text-shadow: 0px 0px 3px white;
 }
 .page-sect, .header-contain, .footer-contain {
-    width: 100%;
+    width: 100vw;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -205,7 +208,7 @@ ul, li {
     font-weight: 400;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
-.hero-h2, .hero-p, .quote-btn, .menu, .sub-menu, .sub-menu-a, .slogan, .paragraph, span, #toTop, .service-menu-h2, .service-menu-item, .close {
+.hero-h2, .hero-p, .quote-btn, .menu, .sub-menu, .sub-menu-a, .slogan, .paragraph, .services-p, span, #toTop, .service-menu-h2, .service-menu-item, .close, textarea, .footer-contain {
     font-family: 'Open Sans', sans-serif;
 }
 .hero-h2 {
@@ -230,7 +233,6 @@ ul, li {
     outline: none;
     border: none;
     border-radius: 7px;
-    font-weight: 800;
     font-size: 18px;
     background-color: rgb(255, 123, 0);
     color: white;
@@ -277,21 +279,22 @@ ul, li {
     font-weight: 400;
 }
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(auto, auto);
-    grid-gap: 25px;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 900px;
     padding-top: 30px;
 }
 .service-cont {
+    flex: 1 0 260px;
     background-color: rgba(0, 92, 169, 0.2);
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    padding: 10px;
 }
 .service-h3 {
     margin-top: 3vh;
-    padding: 15px;
+    padding: 15px 0;
     text-align: center;
     color: #055ca9;
     font-size: 22px;
@@ -302,9 +305,14 @@ ul, li {
 .service-img {
     display: block;
     width: 100%;
-    max-width: 350px;
     margin: 0 auto;
-    padding: 10px;
+    max-width: 280px;
+}
+.services-p {
+    padding: 10px 0;
+    line-height: 1.5;
+    color: #005ca9;
+    font-size: 16px;
 }
 .benefits-ul {
     display: block;
@@ -326,6 +334,9 @@ ul, li {
     margin-right: 10px;
 }
 .service-menu-h2 {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 15px;
     color: #005ca9;
     font-weight: bold;
@@ -334,20 +345,22 @@ ul, li {
     background-color: rgba(0, 92, 169, 0.1);
 }
 .services-menu-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(auto, auto);
-    grid-gap: 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
     margin-top: 15px;
     list-style-type: none;
+    text-align: center;
 }
 .service-menu-item {
     display: block;
-    width: 150px;
-    padding: 5px 0 5px 0;
-    justify-self: center;
-    text-align: center;
+    margin: 10px;
+    min-width: 100px;
+    max-width: 150px;
+    padding: 5px 0;
 }
 .service-menu-item:hover {
     background-color: rgba(0, 92, 169, 0.1);
@@ -357,28 +370,60 @@ ul, li {
     color: #005ca9;
 }
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(auto, auto);
-    justify-items: center;
-    grid-gap: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
 .gallery-thumb {
+    flex: 1 0 175px;
+    margin: 15px;
+}
+.gallery-thumb > img {
     display: block;
     width: 100%;
+    max-width: 265px;
+    margin: 0 auto;
 }
-.gallery-modal {
+.gallery-modal, .contact-modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.0);
     transform: rotateX(90deg);
+}
+.footer-contain {
+    padding: 20px 15px 75px 15px;
+    text-align: center;
+    background-color: #005ca9;
+    color: white;
+}
+.sitemap {
+    display: flex;
+    color: white;
+    padding-bottom: 20px;
+}
+.sitemap-a {
+    flex: 1 0 auto;
+    color: white;
+}
+.signature {
+    font-size: 14px;
+}
+.signature > a {
+    font-weight: bold;
+    color: white;
+}
+.sitemap-a:first-child {
+    text-align: right;
+}
+.sitemap-a:nth-child(3) {
+    text-align: left;
 }
 #modalImg {
     position: fixed;
@@ -386,17 +431,19 @@ ul, li {
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
-    width: 95%;
-    max-width: 400px;
+    max-width: 95vw;
+    max-height: 95vh;
 }
 .close {
+    display: none;
     position: fixed;
-    top: 5%;
-    right: 5%;
+    top: 20px;
+    right: 30px;
     padding: 3px;
     color: white;
     border: 1px solid white;
     border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.15);
 }
 .close:hover {
     cursor: pointer;
@@ -425,30 +472,51 @@ ul, li {
 .toTop:hover {
     cursor: pointer;
 }
-.contact-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.0);
-    transform: rotateX(90deg);
-}
 .contact-form {
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    padding-top: 50px;
 }
 .form-message-cont {
-    text-align: center;
-}
-.contact-form > input, .contact-form > button {
-    display: block;
     margin: 0 auto;
-    padding: 5px;
-    margin-top: 15px;
-    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    color: white;
 }
+.contact-form > input, .contact-form > textarea, .contact-form > button {
+    display: block;
+    width: 90%;
+    max-width: 300px;
+    margin: 2vh auto;
+    padding: 5px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+::placeholder {
+    color: white;
+    opacity: 1;
+}
+.contact-form > textarea {
+    height: 100px;
+}
+.contact-form > button {
+    width: 100px;
+    background-color: rgb(255, 123, 0);
+    border: none;
+}
+.contact-form > button:hover {
+    cursor: pointer;
+}
+input:required {
+    box-shadow: none;
+}
+
 
 .sub-menu-out-1 {
     animation: sub-menu-out-1 300ms ease-out forwards;
@@ -495,26 +563,26 @@ ul, li {
 @keyframes sub-menu-out-2 {
     0% { top: 0px; }
     50% { transform: rotateX(90deg); }
-    100% { transform: rotateX(0deg); top: 89px; }
+    100% { transform: rotateX(0deg); top: 109px; }
 }
 @keyframes sub-menu-out-3 {
     0% { top: 0px; }
     50% { transform: rotateX(90deg); }
-    100% { transform: rotateX(0deg); top: 133px; }
+    100% { transform: rotateX(0deg); top: 173px; }
 }
 @keyframes sub-menu-in-1 {
-    0% { transform: rotateX(0deg); top: 75px; }
-    25% { transform: rotateX(90deg); }
+    0% { transform: rotateX(0deg); top: 45px; }
+    50% { transform: rotateX(90deg); }
     100% { top: 0px; }
 }
 @keyframes sub-menu-in-2 {
-    0% { transform: rotateX(0deg); top: 128px; }
-    25% { transform: rotateX(90deg); }
+    0% { transform: rotateX(0deg); top: 109px; }
+    50% { transform: rotateX(90deg); }
     100% { top: 0px; }
 }
 @keyframes sub-menu-in-3 {
-    0% { transform: rotateX(0deg); top: 181px; }
-    25% { transform: rotateX(90deg); }
+    0% { transform: rotateX(0deg); top: 173px; }
+    50% { transform: rotateX(90deg); }
     100% { top: 0px; }
 }
 @keyframes hero-in {
@@ -535,24 +603,19 @@ ul, li {
 }
 @keyframes modalOpen {
     from { transform: rotateX(90deg); background-color: rgba(0, 0, 0, 0.0); }
-    to { transform: rotateX(0deg); background-color: rgba(0, 0, 0, 0.8); }
+    to { transform: rotateX(0deg); background-color: rgba(0, 0, 0, 0.9); }
 }
 @keyframes modalClose {
-    from { transform: rotateX(0deg); background-color: rgba(0, 0, 0, 0.8); }
+    from { transform: rotateX(0deg); background-color: rgba(0, 0, 0, 0.9); }
     to { transform: rotateX(90deg); background-color: rgba(0, 0, 0, 0.0); }
 }
 
+@media screen and (max-height: 500px) {
+    
+}
 @media screen and (orientation: landscape) and (max-width: 1000px) {
     .hero-twins {
         height: 75vh;
-    }
-}
-@media screen and (orientation: landscape) and (max-width: 600px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media screen and (max-width: 1001px) {
@@ -569,14 +632,8 @@ ul, li {
     .hero-p {
         font-size: 16px;
     }
-    .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 @media screen and (max-width: 801px) {
-    .services-grid {
-        grid-template-columns: 1fr 1fr;
-    }
     .hide-mobile {
         display: none;
     }
@@ -584,19 +641,13 @@ ul, li {
         display: block;
     }
     .logo {
-        width: 50px;
+        height: 40px;
     }
     .services-h2 {
         font-size: 5vw;
     }
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 @media screen and (max-width: 601px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
     .slogan {
         font-size: 3vw;
     }
@@ -610,10 +661,24 @@ ul, li {
     }
 }
 @media screen and (max-width: 500px) {
-    .services-menu-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@media screen and (max-width: 400px) {
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FINISH FOOTER AND FIND A WAY TO TEST THE PHP CONTACT FORM */
