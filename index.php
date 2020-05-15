@@ -35,6 +35,7 @@
                     <li class="menu hide-mobile"><a class="menu-a" href="#services">Services</a></li>
                     <li class="menu hide-mobile"><a class="menu-a" href="#benefits">Benefits</a></li>
                     <li class="menu hide-mobile"><a class="menu-a" href="#ourWork">Our Work</a></li>
+                    <li class="menu hide-mobile"><span class="menu-a contact-info">(352) 835-6209<br><a class="email-address" href="mailto:getyourestimate@underpressureexteriorcleaning.com">Email Us!</a></span></li>
                     <li class="hide-desktop"><img id="burger" class="trigram" src="images/under-pressure-trigram.svg" alt=""></li>
                     <li class="sub-menu" id="subMenuItem1"><a href="#services" class="sub-menu-a">Services</a></li>
                     <li class="sub-menu" id="subMenuItem2"><a href="#benefits" class="sub-menu-a">Benefits</a></li>
@@ -152,6 +153,12 @@
                 <div class="gallery-thumb"><img class="thumbnail" src="images/windows.jpg" alt=""></div>
             </div>
         </div>
+        <div class="page-sect">
+            <h2 class="service-h3">Get in Touch</h2>
+            <p class="get-in-touch servicing1">Servicing Hernando, Citrus and Pasco Counties.</p>
+            <p class="get-in-touch"><a href="mailto:GetYourEstimate@UnderpressureExteriorCleaning.com">GetYourEstimate@UnderpressureExteriorCleaning.com</a></p>
+            <p class="get-in-touch servicing2">(352) 835-6209</p>
+        </div>
         <div class="footer-contain">
             <div class="sitemap">
                 <a href="#services" class="sitemap-a">Services</a>
@@ -169,16 +176,16 @@
             <!-- Contact form modal -->
             <form class="contact-form" action="includes/user_process.php" method="post" name="user" id="contactForm">
         
-                <div class="form-message-cont">
+                <div class="form-message-cont" id="formMessage">
                     <input class="checkbox" type="checkbox" name="checkbox" id="checkBox">
                     <span id="formClause">Please contact me about your exterior cleaning services.</span>
                 </div>
         
-                <input type="text" name="fullName" id="fullName" placeholder="*Full Name" value="" required>
+                <input type="text" name="fullName" id="fullName" placeholder="*Full Name" value="" required maxlength="20">
         
-                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="*Phone Number" value="" required>
+                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="*Phone Number" value="" required maxlength="15">
         
-                <input type="email" name="eMail" id="eMail" placeholder="*Email" value="" required>
+                <input type="email" name="eMail" id="eMail" placeholder="*Email" value="" required maxlength="30">
         
                 <textarea type="text" name="textArea" id="textArea" placeholder="Questions or comments..." value=""></textarea>
         

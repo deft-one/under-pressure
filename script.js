@@ -21,7 +21,7 @@ let closeModal = document.getElementById('close');
 let closeForm = document.getElementById('closeForm');
 let contactModal = document.getElementById('contactModal');
 
-function validateForm(e) {
+function validateClick(e) {
     if (checkBox.checked !== true) {
         formClause.style.color = 'rgba(255, 0, 0, 0.8)';
     } else {
@@ -31,22 +31,36 @@ function validateForm(e) {
         fullName.style.backgroundColor = 'rgba(255, 0, 0, 0.356)';
         fullName.placeholder = 'Full Name Required';
     } else {
-        fullName.style.backgroundColor = 'white';
+        fullName.style.backgroundColor = 'initial';
         fullName.placeholder = '*Full Name';
     }
     if (phoneNumber.value === '') {
         phoneNumber.style.backgroundColor = 'rgba(255, 0, 0, 0.356)';
         phoneNumber.placeholder = 'Phone Number Required';
     } else {
-        phoneNumber.style.backgroundColor = 'white';
+        phoneNumber.style.backgroundColor = 'initial';
         phoneNumber.placeholder = '*Phone Number';
     }
     if (eMail.value === '') {
         eMail.style.backgroundColor = 'rgba(255, 0, 0, 0.356)';
         eMail.placeholder = 'eMail Required';
     } else {
-        eMail.style.backgroundColor = 'white';
+        eMail.style.backgroundColor = 'initial';
         eMail.placeholder = '*eMail';
+    }
+}
+
+function validateKeyup() {
+    let regexAZ = RegExp('^[a-zA-Z -]*$');
+    let regexPhn = RegExp('^[0-9\(\)-.]*$');
+    if (!regexAZ.test(fullName.value)) {
+        fullName.value = fullName.value.slice(0, -1);
+    }
+    if (!regexPhn.test(phoneNumber.value)) {
+        phoneNumber.value = phoneNumber.value.slice(0, -1);
+    }
+    if (!regexPhn.test(phoneNumber.value)) {
+        phoneNumber.value = phoneNumber.value.slice(0, -1);
     }
 }
 
@@ -70,6 +84,10 @@ function menuIn() {
     subMenuItem3.classList.add('sub-menu-in-3');
 }
 
+document.addEventListener('keyup', function() {
+    validateKeyup();
+});
+
 document.addEventListener('click', function(e) {
     if (e.target.classList.contains('thumbnail')) {
         if (!galleryModal.classList.contains('modalOpen')) {
@@ -90,7 +108,7 @@ document.addEventListener('click', function(e) {
 });
 
 submitBtn.addEventListener('click', function(e) {
-    validateForm(e);
+    validateClick(e);
 });
 
 document.addEventListener('click', function(e) {
