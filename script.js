@@ -171,3 +171,24 @@ window.onscroll = function() {
         }
     }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// MOVE VARIABLES OUT OF GLOBAL SCOPE
+// DISABLE SEND BUTTON UNTIL FIELDS ARE VALIDATED
