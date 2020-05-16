@@ -152,3 +152,9 @@ window.onscroll = function() {
         }
     }
 };
+
+window.onload = function() {
+    var date = new Date();
+    var thisYear = date.getFullYear();
+    document.getElementById('copyright').innerText = 'Copyright ' + thisYear + ' Under Pressure Exterior Cleaning.';
+}
