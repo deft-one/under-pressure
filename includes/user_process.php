@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
     if (empty($fullName) || empty($phoneNumber) || empty($eMail)) {
         exit();
     } else {
-        if (!preg_match("/^[a-zA-Z ]*$/", $fullName) || !preg_match("/^[0-9 \.(\)-]*$/", $phoneNumber) || !preg_match("/.*/", $textArea)) {
+        if (!preg_match("/^[a-zA-Z -]*$/", $fullName) || !preg_match("/^[0-9\(\)-.]*$/", $phoneNumber) || !preg_match("/.*/", $textArea)) {
             exit();
         } else {
             if (!filter_var($eMail, FILTER_VALIDATE_EMAIL)) {
@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
     // Use mail() to send with passed-in values defined above
     mail($to, $subject, $message, $headers);
 
-    header("location: ../");
+    header("location: https://www.underpressureexteriorcleaning.com/form-complete/thank-you.php");
     //ob_end_flush clears the headers after sending
     ob_end_flush();
 } else {

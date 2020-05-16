@@ -1,194 +1,154 @@
-let navUl = document.getElementById('navUl');
-let burger = document.getElementById('burger');
-let subMenuItem1 = document.getElementById('subMenuItem1');
-let subMenuItem2 = document.getElementById('subMenuItem2');
-let subMenuItem3 = document.getElementById('subMenuItem3');
-let hero = document.getElementById('hero');
-let toTop = document.getElementById('toTop');
-let contactForm = document.getElementById('contactForm');
-let checkBox = document.getElementById('checkBox');
-let formClause = document.getElementById('formClause');
-let fullName = document.getElementById('fullName');
-let phoneNumber = document.getElementById('phoneNumber');
-let eMail = document.getElementById('eMail');
-let textArea = document.getElementById('textArea');
-let submitBtn = document.getElementById('submitBtn');
-let quoteBtn1 = document.getElementById('quoteBtn1');
-let quoteBtn2 = document.getElementById('quoteBtn2');
-let galleryModal = document.getElementById('galleryModal');
-let modalImg = document.getElementById('modalImg');
-let closeModal = document.getElementById('close');
-let closeForm = document.getElementById('closeForm');
-let contactModal = document.getElementById('contactModal');
-
+// VALIDATES INPUTS ON BUTTON CLICK
 function validateClick(e) {
-    if (checkBox.checked !== true) {
-        formClause.style.color = 'rgba(255, 0, 0, 0.8)';
-    } else {
-        formClause.style.color = 'white';
+    if (document.getElementById('checkBox').checked !== true) {
+        document.getElementById('formClause').style.color = 'rgba(255, 0, 0, 0.8)';
     }
-    if (fullName.value === '') {
-        fullName.style.backgroundColor = 'rgba(255, 0, 0, 0.356)';
-        fullName.placeholder = 'Full Name Required';
-    } else {
-        fullName.style.backgroundColor = 'initial';
-        fullName.placeholder = '*Full Name';
+    if (document.getElementById('fullName').value === '') {
+        document.getElementById('fullName').style.backgroundColor = 'rgba(255, 0, 0, 0.356)';
+        document.getElementById('fullName').placeholder = 'Full Name Required';
     }
-    if (phoneNumber.value === '') {
-        phoneNumber.style.backgroundColor = 'rgba(255, 0, 0, 0.356)';
-        phoneNumber.placeholder = 'Phone Number Required';
-    } else {
-        phoneNumber.style.backgroundColor = 'initial';
-        phoneNumber.placeholder = '*Phone Number';
+    if (document.getElementById('phoneNumber').value === '') {
+        document.getElementById('phoneNumber').style.backgroundColor = 'rgba(255, 0, 0, 0.356)';
+        document.getElementById('phoneNumber').placeholder = 'Phone Number Required';
     }
-    if (eMail.value === '') {
-        eMail.style.backgroundColor = 'rgba(255, 0, 0, 0.356)';
-        eMail.placeholder = 'eMail Required';
-    } else {
-        eMail.style.backgroundColor = 'initial';
-        eMail.placeholder = '*eMail';
+    if (document.getElementById('eMail').value === '') {
+        document.getElementById('eMail').style.backgroundColor = 'rgba(255, 0, 0, 0.356)';
+        document.getElementById('eMail').placeholder = 'eMail Required';
     }
 }
 
+// VALIDATES FORM INPUTS ON KEYUP
 function validateKeyup() {
     let regexAZ = RegExp('^[a-zA-Z -]*$');
     let regexPhn = RegExp('^[0-9\(\)-.]*$');
-    if (!regexAZ.test(fullName.value)) {
-        fullName.value = fullName.value.slice(0, -1);
+    if (!regexAZ.test(document.getElementById('fullName').value)) {
+        document.getElementById('fullName').value = document.getElementById('fullName').value.slice(0, -1);
+    } else {
+        document.getElementById('fullName').style.backgroundColor = 'background-color: rgba(255, 255, 255, 0.15)';
     }
-    if (!regexPhn.test(phoneNumber.value)) {
-        phoneNumber.value = phoneNumber.value.slice(0, -1);
-    }
-    if (!regexPhn.test(phoneNumber.value)) {
-        phoneNumber.value = phoneNumber.value.slice(0, -1);
+    if (!regexPhn.test(document.getElementById('phoneNumber').value)) {
+        document.getElementById('phoneNumber').value = document.getElementById('phoneNumber').value.slice(0, -1);
+    } else {
+        document.getElementById('phoneNumber').style.backgroundColor = 'background-color: rgba(255, 255, 255, 0.15)';
     }
 }
 
+// OPENS THE MOBILE MENU
 function menuOut() {
-    burger.classList.add('open');
-    subMenuItem1.classList.remove('sub-menu-in-1');
-    subMenuItem2.classList.remove('sub-menu-in-2');
-    subMenuItem3.classList.remove('sub-menu-in-3');
-    subMenuItem1.classList.add('sub-menu-out-1');
-    subMenuItem2.classList.add('sub-menu-out-2');
-    subMenuItem3.classList.add('sub-menu-out-3');
+    document.getElementById('burger').classList.add('open');
+    document.getElementById('subMenuItem1').classList.remove('sub-menu-in-1');
+    document.getElementById('subMenuItem2').classList.remove('sub-menu-in-2');
+    document.getElementById('subMenuItem3').classList.remove('sub-menu-in-3');
+    document.getElementById('subMenuItem1').classList.add('sub-menu-out-1');
+    document.getElementById('subMenuItem2').classList.add('sub-menu-out-2');
+    document.getElementById('subMenuItem3').classList.add('sub-menu-out-3');
 }
 
+// CLOSES THE MOBILE MENU
 function menuIn() {
-    burger.classList.remove('open');
-    subMenuItem1.classList.remove('sub-menu-out-1');
-    subMenuItem2.classList.remove('sub-menu-out-2');
-    subMenuItem3.classList.remove('sub-menu-out-3');
-    subMenuItem1.classList.add('sub-menu-in-1');
-    subMenuItem2.classList.add('sub-menu-in-2');
-    subMenuItem3.classList.add('sub-menu-in-3');
+    document.getElementById('burger').classList.remove('open');
+    document.getElementById('subMenuItem1').classList.remove('sub-menu-out-1');
+    document.getElementById('subMenuItem2').classList.remove('sub-menu-out-2');
+    document.getElementById('subMenuItem3').classList.remove('sub-menu-out-3');
+    document.getElementById('subMenuItem1').classList.add('sub-menu-in-1');
+    document.getElementById('subMenuItem2').classList.add('sub-menu-in-2');
+    document.getElementById('subMenuItem3').classList.add('sub-menu-in-3');
 }
 
-document.addEventListener('keyup', function() {
-    validateKeyup();
-});
-
+// LISTENS FOR CLICKS ON THUMBNAILS, THEN OPENS / CLOSES THE MODAL AND ASSIGNS / CLEARS THE IMAGE SRC
 document.addEventListener('click', function(e) {
     if (e.target.classList.contains('thumbnail')) {
-        if (!galleryModal.classList.contains('modalOpen')) {
-            modalImg.src = e.target.src;
-            galleryModal.classList.add('modalOpen');
-            galleryModal.classList.remove('modalClose');
-            closeModal.style.display = 'block';
+        if (!document.getElementById('galleryModal').classList.contains('modalOpen')) {
+            document.getElementById('modalImg').src = e.target.src;
+            document.getElementById('galleryModal').classList.add('modalOpen');
+            document.getElementById('galleryModal').classList.remove('modalClose');
+            document.getElementById('close').style.display = 'block';
         } 
     }
-    if (e.target === galleryModal || e.target === closeModal) {
-        galleryModal.classList.remove('modalOpen');
-        galleryModal.classList.add('modalClose');
-        closeModal.style.display = 'none';
+    if (e.target === document.getElementById('galleryModal') || e.target === document.getElementById('close')) {
+        document.getElementById('galleryModal').classList.remove('modalOpen');
+        document.getElementById('galleryModal').classList.add('modalClose');
+        document.getElementById('close').style.display = 'none';
         setTimeout(function() {
-            modalImg.src = '';
+            document.getElementById('modalImg').src = '';
         },500);
     }
 });
 
-submitBtn.addEventListener('click', function(e) {
-    validateClick(e);
-});
-
+// LISTENS FOR CLICKS ON THE SUBMIT BUTTON AND RUNS THE FORM VALIDATION FUNCTION
 document.addEventListener('click', function(e) {
-    if (e.target === quoteBtn1 || e.target === quoteBtn2) {
-        contactModal.classList.remove('modalClose');
-        contactModal.classList.add('modalOpen');
-        closeForm.style.display = 'block';
-    } else if (e.target === contactModal || e.target === closeForm) {
-        contactModal.classList.remove('modalOpen');
-        contactModal.classList.add('modalClose');
-        closeForm.style.display = 'none';
+    if (e.target === document.getElementById('submitBtn')) {
+        validateClick(e);
     }
 });
 
+// LISTENS FOR KEYUP ON INPUTS, RUNS VALIDATION
+document.addEventListener('keyup', function() {
+    validateKeyup();
+});
+
+// LISTENS FOR CLICKS ON QUOTE BUTTONS, THEN OPENS / CLOSES THE MODAL
 document.addEventListener('click', function(e) {
-    if (e.target === burger || e.target.classList.contains('sub-menu')) {
+    if (e.target === document.getElementById('quoteBtn1') || e.target === document.getElementById('quoteBtn2')) {
+        document.getElementById('contactModal').classList.remove('modalClose');
+        document.getElementById('contactModal').classList.add('modalOpen');
+        document.getElementById('closeForm').style.display = 'block';
+    } else if (e.target === document.getElementById('contactModal') || e.target === document.getElementById('closeForm')) {
+        document.getElementById('contactModal').classList.remove('modalOpen');
+        document.getElementById('contactModal').classList.add('modalClose');
+        document.getElementById('closeForm').style.display = 'none';
+    }
+});
+
+// LISTENS FOR CLICKS ON THE MOBILE MENU, THEN RUNS THE MENU IN / OUT FUNCTIONS
+document.addEventListener('click', function(e) {
+    if (e.target === document.getElementById('burger') || e.target.classList.contains('sub-menu')) {
         e.preventDefault();
-        if (burger.classList.contains('open')) {
+        if (document.getElementById('burger').classList.contains('open')) {
             menuIn();
         } else {
             menuOut();
         }
     } else {
-        if (burger.classList.contains('open')) {
+        if (document.getElementById('burger').classList.contains('open')) {
             menuIn();
         }
     }
 });
 
-hero.addEventListener('mouseover', function() {
-    if (hero.classList.contains('hero-out')) {
-        hero.classList.remove('hero-out');
-        hero.classList.add('hero-in');
+// LISTENS FOR MOUSEOVER / MOUSEOUT ON HERO IMAGE, THEN ADDS A CLASS TO ANIMATE TRANSPARENCY
+document.getElementById('hero').addEventListener('mouseover', function(e) {
+    if (document.getElementById('hero').classList.contains('hero-out')) {
+        document.getElementById('hero').classList.remove('hero-out');
+        document.getElementById('hero').classList.add('hero-in');
     } else {
-        hero.classList.add('hero-in');
+        document.getElementById('hero').classList.add('hero-in');
     }
 });
 
-hero.addEventListener('mouseleave', function() {
-    if (hero.classList.contains('hero-in')) {
-        hero.classList.remove('hero-in');
-        hero.classList.add('hero-out');
+document.getElementById('hero').addEventListener('mouseleave', function(e) {
+    if (document.getElementById('hero').classList.contains('hero-in')) {
+        document.getElementById('hero').classList.remove('hero-in');
+        document.getElementById('hero').classList.add('hero-out');
     } else {
-        hero.classList.add('hero-out');
+        document.getElementById('hero').classList.add('hero-out');
     }
 });
 
-toTop.addEventListener('click', function(e) {
+// LISTENS FOR CLICKS ON THE TOTOP BUTTON, THEN SCROLLS TO TOP OF SCREEN
+document.getElementById('toTop').addEventListener('click', function(e) {
     window.scrollTo(0, 0);
 });
 
+// CHECKS THE WINDOW SCROLL POSITION, THEN ADDS / REMOVES THE TOTOP BUTTON > OR < 600PX
 window.onscroll = function() {
     if (window.scrollY >= 600) {
-        toTop.classList.remove('toTop-out');
-        toTop.classList.add('toTop-in');
+        document.getElementById('toTop').classList.remove('toTop-out');
+        document.getElementById('toTop').classList.add('toTop-in');
     } else if (window.scrollY < 600) {
-        if (toTop.classList.contains('toTop-in')) {
-            toTop.classList.remove('toTop-in');
-            toTop.classList.add('toTop-out');
+        if (document.getElementById('toTop').classList.contains('toTop-in')) {
+            document.getElementById('toTop').classList.remove('toTop-in');
+            document.getElementById('toTop').classList.add('toTop-out');
         }
     }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// MOVE VARIABLES OUT OF GLOBAL SCOPE
-// DISABLE SEND BUTTON UNTIL FIELDS ARE VALIDATED

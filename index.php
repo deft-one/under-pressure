@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script defer src="includes/script.js"></script>
+    <script defer src="script.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Frijole&family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
     <link rel="fluid-icon" href="https://www.underpressureexteriorcleaning.com/favicon.ico" title="Favicon">
     <link rel="canonical" href="https://www.underpressureexteriorcleaning.com/" />
-    <!-- NEED TO UPDATE META TAGS!!!!! 005ca9 -->
+    
 </head>
 <body>
     
@@ -156,7 +156,7 @@
         <div class="page-sect">
             <h2 class="service-h3">Get in Touch</h2>
             <p class="get-in-touch servicing1">Servicing Hernando, Citrus and Pasco Counties.</p>
-            <p class="get-in-touch"><a href="mailto:GetYourEstimate@UnderpressureExteriorCleaning.com">GetYourEstimate@UnderpressureExteriorCleaning.com</a></p>
+            <p class="get-in-touch"><a href="mailto:GetYourEstimate@UnderpressureExteriorCleaning.com">Click To Email!</a></p>
             <p class="get-in-touch servicing2">(352) 835-6209</p>
         </div>
         <div class="footer-contain">
@@ -203,6 +203,5 @@
 
     </div>
 
-<script src="script.js"></script>
 </body>
 </html>
