@@ -56,24 +56,24 @@ function menuIn() {
 }
 
 // LISTENS FOR CLICKS ON THUMBNAILS, THEN OPENS / CLOSES THE MODAL AND ASSIGNS / CLEARS THE IMAGE SRC
-document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('thumbnail')) {
-        if (!document.getElementById('galleryModal').classList.contains('modalOpen')) {
-            document.getElementById('modalImg').src = e.target.src;
-            document.getElementById('galleryModal').classList.add('modalOpen');
-            document.getElementById('galleryModal').classList.remove('modalClose');
-            document.getElementById('close').style.display = 'block';
-        } 
-    }
-    if (e.target === document.getElementById('galleryModal') || e.target === document.getElementById('close')) {
-        document.getElementById('galleryModal').classList.remove('modalOpen');
-        document.getElementById('galleryModal').classList.add('modalClose');
-        document.getElementById('close').style.display = 'none';
-        setTimeout(function() {
-            document.getElementById('modalImg').src = '';
-        },500);
-    }
-});
+// document.addEventListener('click', function(e) {
+//     if (e.target.classList.contains('thumbnail')) {
+//         if (!document.getElementById('galleryModal').classList.contains('modalOpen')) {
+//             document.getElementById('modalImg').src = e.target.src;
+//             document.getElementById('galleryModal').classList.add('modalOpen');
+//             document.getElementById('galleryModal').classList.remove('modalClose');
+//             document.getElementById('close').style.display = 'block';
+//         } 
+//     }
+//     if (e.target === document.getElementById('galleryModal') || e.target === document.getElementById('close')) {
+//         document.getElementById('galleryModal').classList.remove('modalOpen');
+//         document.getElementById('galleryModal').classList.add('modalClose');
+//         document.getElementById('close').style.display = 'none';
+//         setTimeout(function() {
+//             document.getElementById('modalImg').src = '';
+//         },500);
+//     }
+// });
 
 // LISTENS FOR CLICKS ON THE SUBMIT BUTTON AND RUNS THE FORM VALIDATION FUNCTION
 document.addEventListener('click', function(e) {
