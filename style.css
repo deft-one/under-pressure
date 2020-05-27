@@ -128,6 +128,9 @@ ul, li {
     display: block;
     width: 100px;
 }
+.fb-icon {
+    width: 40px;
+}
 .nav-ul {
     display: flex;
     align-items: flex-end;
@@ -361,6 +364,7 @@ a {
 }
 .service-menu-item:hover {
     background-color: rgba(0, 92, 169, 0.1);
+    border-radius: 5px;
 }
 .service-menu-item > a {
     font-weight: 800;
@@ -372,6 +376,7 @@ a {
     width: 100%;
     max-width: 246px;
     height: auto;
+    padding: 50px 15px;
 }
 /* .gallery-grid {
     display: flex;
