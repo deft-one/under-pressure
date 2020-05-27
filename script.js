@@ -90,6 +90,7 @@ document.addEventListener('keyup', function() {
 // LISTENS FOR CLICKS ON QUOTE BUTTONS, THEN OPENS / CLOSES THE MODAL
 document.addEventListener('click', function(e) {
     if (e.target === document.getElementById('quoteBtn1') || e.target === document.getElementById('quoteBtn2')) {
+        document.getElementById('fullName').focus();
         document.getElementById('contactModal').classList.remove('modalClose');
         document.getElementById('contactModal').classList.add('modalOpen');
         document.getElementById('closeForm').style.display = 'block';
