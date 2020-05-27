@@ -535,6 +535,11 @@ a {
     color: white;
     opacity: 1;
 }
+.contact-form > input:focus, .contact-form > textarea:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 3px rgb(0, 89, 255);
+    border: 1px solid rgb(0, 89, 255);
+}
 .contact-form > textarea {
     height: 100px;
 }
