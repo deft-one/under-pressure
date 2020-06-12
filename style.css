@@ -224,7 +224,7 @@ a {
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 .hero-h2, .hero-p, .quote-btn, .menu, .sub-menu, .sub-menu-a, .slogan, .paragraph, .services-h2, .services-p, span, #toTop, .service-menu-h3, .service-menu-item, .close, textarea, .footer-contain, .service-h3, .get-in-touch, .thank-you-h1, .thank-you-h2, .thank-you-p {
-    font-family: 'Montserrat', arial;
+    font-family: 'Open Sans', arial;
 }
 .hero-h2 {
     margin-top: 20px;
