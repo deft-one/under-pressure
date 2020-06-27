@@ -149,7 +149,7 @@ a {
     color: white;
 }
 .menu:first-child {
-    flex: 3 0 auto;
+    flex: 1 1 auto;
 }
 .menu:nth-child(5) {
     flex: 3 0 auto;
