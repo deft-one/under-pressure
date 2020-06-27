@@ -128,9 +128,6 @@ ul, li {
     display: block;
     width: 100px;
 }
-.fb-icon {
-    width: 40px;
-}
 .nav-ul {
     display: flex;
     align-items: flex-end;
@@ -172,6 +169,12 @@ a {
     right: 0;
     width: 30px;
     margin: 17px 17px 0 0;
+}
+.fb-icon {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 75px;
 }
 .hide-desktop {
     display: none;
