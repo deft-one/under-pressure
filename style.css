@@ -181,8 +181,8 @@ a {
 }
 .sub-menu {
     position: absolute;
-    right: 0;
-    top: 0px;
+    right: 0px;
+    top: 150px;
     width: 175px;
     list-style-type: none;
     padding: 20px 30px 20px 20px;
@@ -619,30 +619,30 @@ input:required {
 @keyframes sub-menu-out-1 {
     0% { top: 0px; }
     50% { transform: rotateX(90deg); }
-    100% { transform: rotateX(0deg); top: 45px; }
+    100% { transform: rotateX(0deg); top: 55px; }
 }
 @keyframes sub-menu-out-2 {
     0% { top: 0px; }
     50% { transform: rotateX(90deg); }
-    100% { transform: rotateX(0deg); top: 109px; }
+    100% { transform: rotateX(0deg); top: 119px; }
 }
 @keyframes sub-menu-out-3 {
     0% { top: 0px; }
     50% { transform: rotateX(90deg); }
-    100% { transform: rotateX(0deg); top: 173px; }
+    100% { transform: rotateX(0deg); top: 183px; }
 }
 @keyframes sub-menu-in-1 {
-    0% { transform: rotateX(0deg); top: 45px; }
+    0% { transform: rotateX(0deg); top: 55px; }
     50% { transform: rotateX(90deg); }
     100% { top: 0px; }
 }
 @keyframes sub-menu-in-2 {
-    0% { transform: rotateX(0deg); top: 109px; }
+    0% { transform: rotateX(0deg); top: 119px; }
     50% { transform: rotateX(90deg); }
     100% { top: 0px; }
 }
 @keyframes sub-menu-in-3 {
-    0% { transform: rotateX(0deg); top: 173px; }
+    0% { transform: rotateX(0deg); top: 183px; }
     50% { transform: rotateX(90deg); }
     100% { top: 0px; }
 }
